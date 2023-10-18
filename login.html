@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container" id="loginform">
+       <form action="" id="form">
+          <h2>User Login</h2>
+          <div class="inputgrp">
+            <label for="uname">Username</label>
+            <input type="text" id="uname" name="uname" >
+            
+          </div>  
+          
+          <div class="inputgrp">
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pswd">
+            
+          </div>
+          
+          <button type="submit" id="logbtn">Login</button>
+          
+        </form>
+    </div>
+
+      <script>
+        const login = document.querySelector(".container");
+        login.addEventListener("submit",function(event){
+          event.preventDefault();
+          const username = document.getElementById("uname").value;
+          const password = document.getElementById("pwd").value;
+          if(username === "" || password === ""){
+            alert("Please fill in all fields.");
+          }
+          else{
+            window.location.href="todo.html";
+          }
+        })
+         
+      </script>
+</body>
+</html>
